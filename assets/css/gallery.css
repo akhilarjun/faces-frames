@@ -62,7 +62,10 @@ body{
 .lbox img {
     max-width: 90%;
     max-height: 80%;
-    margin-top: 2%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .lbox:target{
@@ -76,11 +79,30 @@ body{
 
 @keyframes animatezoom{
     from{
-        transform:scale(0);
+        transform:scale(0) translate(-50%, -50%);
         opacity: 0;
     } 
     to{
-        transform:scale(1);
+        transform:scale(1) translate(-50%, -50%);
         opacity: 1;
     }
+}
+
+@media only screen and (max-width: 1100px) {
+    .gallery {text-align: center;}
+    .banner{padding: 50px 20px;}
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .gallery {text-align: center;}
+    .banner{padding: 50px 20px;}
+    /*75% of original*/
+    .f50{font-size:37.5px;}
+    .f45{font-size:33.75px;}
+    .f40{font-size:30px;}
+    .f35{font-size:26.25px;}
+    .f30{font-size:22.5px;}
+    .f25{font-size:18.75px;}
+    .f20{font-size:15px;}
 }
