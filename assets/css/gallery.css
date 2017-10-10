@@ -1,0 +1,86 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    max-width: 1000px;
+    margin: 0 auto;
+    display: block;
+}
+
+.hideError{display: none !important;}
+
+._nunito{
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+}
+._nunito .b{font-weight: 700;}
+._nunito .l{font-weight: 200;}
+.f20{font-size: 20px;}
+.f25{font-size: 25px;}
+.f30{font-size: 30px;}
+.f35{font-size: 35px;}
+.f40{font-size: 40px;}
+.f45{font-size: 45px;}
+.f50{font-size: 50px;}
+.fblack{color:#000000;}
+.fgrey{color: #888888;}
+.fslate{color: #eeeeee;}
+.fwhite{color: #ffffff;}
+
+.banner{padding: 100px 0px 50px;}
+.banner a{text-decoration: none;transition: all 300ms;color: inherit;}
+.banner a:hover{color: #09adff;}
+
+.gallery .post{
+    margin: 0 15px 10px 0;
+    display: inline-block;
+    height: 350px;
+    width: auto;
+    background: #eeeeee;
+}
+
+.gallery .post img{
+    height: 350px;
+    width: auto;
+}
+
+.lbox{
+    display: none;
+    height: 100%;
+    width: 100%;
+    z-index: 99999;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+}
+
+.lbox img {
+    max-width: 90%;
+    max-height: 80%;
+    margin-top: 2%;
+}
+
+.lbox:target{
+    outline: none;
+    display: block;
+}
+
+.lbox:target img {
+    animation:animatezoom 0.6s;
+}
+
+@keyframes animatezoom{
+    from{
+        transform:scale(0);
+        opacity: 0;
+    } 
+    to{
+        transform:scale(1);
+        opacity: 1;
+    }
+}
