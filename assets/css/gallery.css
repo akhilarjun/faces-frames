@@ -38,13 +38,28 @@ body{
     margin: 0 15px 10px 0;
     display: inline-block;
     height: 350px;
-    width: auto;
+    width: 233.33px;
     background: #eeeeee;
+    position: relative;
+}
+
+.gallery .post:after{
+    content: "@akhilarjun Photography";
+    font-family: "Century Gothic";
+    color: #ddd;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
 }
 
 .gallery .post img{
     height: 350px;
     width: auto;
+    position: absolute;
+    top: 0; left: 0;
+    z-index: 1; /*to keep it above placeholder*/
 }
 
 .lbox{

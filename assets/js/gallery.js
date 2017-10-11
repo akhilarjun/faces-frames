@@ -1,5 +1,7 @@
 var gallery = document.querySelector(".gallery"),
+    containerdiv = document.createElement("div"),
     lboxContainer = document.querySelector(".lightbox_container"),
+    containerdivForLbox = document.createElement("div"),
     noOfImages = 21;
 
 function hadleErrorIMG (postId){
@@ -26,8 +28,10 @@ function hadleErrorIMG (postId){
 
         a.appendChild(img);
         post.appendChild(a);
-        gallery.appendChild(post);
+        containerdiv.appendChild(post);
         lboxa.appendChild(lboxImg);
-        lboxContainer.appendChild(lboxa);
+        containerdivForLbox.appendChild(lboxa);
     }
+    gallery.appendChild(containerdiv);
+    lboxContainer.appendChild(containerdivForLbox);
 })();
